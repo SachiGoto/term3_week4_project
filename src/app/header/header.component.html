@@ -1,0 +1,40 @@
+<!-- <header class="headerBg" [style.background-image]="'url(./assets/greenAroundTheWorld.jpg)'"> -->
+<header>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img class="hamburgerIcon" src="./assets/bars-solid.svg" alt=""></span>
+        </button>
+
+        <div class="col-sm-9 col-md-12 logo">
+          <img class="logo" src="./assets/logo5.png">
+          <h1 class="footerBrandName">Green around the world</h1>
+        </div>
+        <div class="col-sm-3 col-md-9 col-lg-12 navContainer">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+      <div class="heroImage"> <img [src]="heroImage"></div>
+</header>
+

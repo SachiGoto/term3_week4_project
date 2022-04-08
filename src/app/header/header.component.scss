@@ -1,0 +1,74 @@
+@mixin center_center(){
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bigContainer{
+  @include center_center();
+}
+
+.logo{
+  @include center_center();
+  flex-direction:column;
+  //  width:200px;
+  // height:200px;
+}
+
+.headerBg{
+  // background-image:url("./assets/greenAroundTheWorld.jpg");
+  background-size:cover;
+}
+
+.logo{
+  img{
+    width:200px;
+  }
+}
+
+.navContainer{
+  @include center_center()
+}
+header{
+  // margin:3em 0;
+  // display:flex;
+  // justify-content:center;
+  // flex-direction:column;
+  // align-items:center;
+}
+
+
+h1{
+  text-align:center;
+  font-family:karelle;
+}
+
+img{
+  object-fit:cover;
+  width:100%;
+  height:100%;
+
+}
+
+.heroImage{
+  width:100vw;
+  height:50vh;
+}
+
+
+.navbar-toggler{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+
+}
+
+.navContainer{
+  margin:0 auto;
+}
+
+@media(min-width:768px){
+  .hamburgerIcon{
+    display:none;
+  }
+}
