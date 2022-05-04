@@ -15,10 +15,10 @@
 
        <div class="imageContainer">
          <a [routerLink]="['/products', product.productID]">
-        <img class="image" id="imageBack" [alt]="product.imageBackAlt" [src]="product.imageBack"/>
+        <img class="image" id="imageBack" [alt]="product.title" [src]="product.imageBack"/>
       </a>
         <a [routerLink]="['/products', product.productID]">
-         <img class="image" id="imageFront"  [alt]="product.imageFrontAlt" [src]="product.imageFront">
+         <img class="image" id="imageFront"  [alt]="product.title" [src]="product.imageFront">
         </a>
        </div>
 
@@ -31,18 +31,7 @@
       <div class="stock mb-4" [class.noStock]="!product.stockAvail">Stock: {{product.stock}}</div>
 
        <div class="description"><p> {{product.description}}</p></div>
-
-
-       <!-- <button class="cta">
-       <a [routerLink]="['/products', product.productID]">View</a>
-       </button> -->
        <br>
        <button class="cta">Add To Bag</button>
-
-
-
 </div>
-
-
-
 </div>
