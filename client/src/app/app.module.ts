@@ -10,6 +10,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { EditComponent } from './edit/edit.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
 
 
 @NgModule({
@@ -20,6 +24,10 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     ProductDetailComponent,
     HomeComponent,
+    AdminComponent,
+    LoginComponent,
+    EditComponent,
+    NewproductComponent,
 
   ],
   imports: [

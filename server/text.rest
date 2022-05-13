@@ -1,6 +1,87 @@
-GET http://localhost:4600/products
+
+@url = http://localhost:4600
+
+GET  {{url}}/products
 
 ###
 
-GET http://localhost:4600/products/2
+GET {{url}}/products/2
+
+
+
+###
+
+GET {{url}}/allProducts
+
+
+
+###
+
+POST {{url}}/login
+//Do not forget to add two lines
+Content-Type: application/json
+
+
+{
+    "user_name": "sachi",
+    "password": "111"
+
+}
+
+
+###
+
+POST http://localhost:4600/newProducts
+Content-Type: application/json
+
+
+{
+   "image1": "test from server",
+   "image2": "test",
+    "title": "test",
+    "description": "test",
+    "original_price":100,
+    "price" : 100,
+    "stock":"available",
+    "display":"online"
+
+
+
+
+
+
+}
+
+###
+
+PUT http://localhost:4600/update
+Content-Type: application/json
+
+
+{  "id": "31",
+   "image1": "test from server",
+   "image2": "test",
+    "title": "test",
+    "description": "test",
+    "original_price":100,
+    "price" : 100,
+    "stock":"available",
+    "display":"online"
+
+}
+
+
+###
+
+DELETE {{url}}/deleteproduct/62
+
+
+
+
+
+
+
+
+
+
 
