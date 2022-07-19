@@ -55,6 +55,7 @@ db.connect(error=>{
 // })
 
 
+
 server.delete('/deleteproduct/:id', (req, res)=>{
   let id = req.params.id;
   let query = "CALL `deleteProducts`(?);"

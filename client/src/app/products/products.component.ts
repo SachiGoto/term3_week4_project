@@ -67,6 +67,8 @@ export class ProductsComponent implements OnInit {
 
     this.serviceHttp.getOnlinelProducts().subscribe(item=>{
       this.products = item
+
+      console.log(this.products);
     })
   }
 
