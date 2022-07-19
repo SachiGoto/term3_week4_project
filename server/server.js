@@ -2,7 +2,7 @@
 import express from 'express';
 import mysql from 'mysql';
 import cors from 'cors';
-
+import 'dotenv/config';
 // const db = mysql.createConnection({
 //   host:'localhost',
 //   port:8889,
