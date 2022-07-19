@@ -4,6 +4,7 @@ import {Product} from '../interface/products.interface.ts'
 import{NewProduct} from '../interface/newproducts.interface'
 import { Login } from '../interface/login.interface';
 // import { ThisReceiver } from '@angular/compiler';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -11,7 +12,9 @@ import { Login } from '../interface/login.interface';
   providedIn: 'root'
 })
 export class ServiceService {
-  private productUrl = "http://localhost:4600/products";
+  private server = environment.server;
+  private productUrl = this.server + "products";
+
   constructor(private clientHttp:HttpClient) { }
 
   getOnlinelProducts(){
@@ -22,7 +25,7 @@ export class ServiceService {
     return this.clientHttp.get<Product>(this.productUrl + "/" + id);
   }
 
-  private allProductUrl = "http://localhost:4600/allProducts";
+  private allProductUrl = this.server + "allProducts";
 
   getAllProducts(){
     return this.clientHttp.get<Product[]>(this.allProductUrl);
@@ -30,7 +33,7 @@ export class ServiceService {
 
 
 
-private loginURL = "http://localhost:4600/login";
+private loginURL = this.server + "login";
 
 loginService(user_name:string, password:string){
 
@@ -45,7 +48,7 @@ return this.clientHttp.post<Login>(this.loginURL, loginBody);
 
 
 
-private addNewUrl = "http://localhost:4600/newProducts"
+private addNewUrl = this.server + "newProducts"
 
 addNewService(imageFront:string, imageBack:string, title:string, description:string, original_price:any, price:any, stock:string, display:string){
 
@@ -66,7 +69,7 @@ return this.clientHttp.post<{message:string, addNewProducts:boolean}>(this.addNe
 
 
 
-private updateURL = "http://localhost:4600/update";
+private updateURL = this.server + "update";
 // neeed to match with the end point
 updateUser(id:number, imageFront:string, imageBack:string, title:string, description:string, original_price:any, price:any, stock:string, display:string){
     let updateBody={
@@ -92,7 +95,7 @@ updateUser(id:number, imageFront:string, imageBack:string, title:string, descrip
 }
 
 
-private deleteURL = "http://localhost:4600/deleteproduct";
+private deleteURL = this.server + "deleteproduct";
 
 
 
