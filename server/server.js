@@ -3,12 +3,21 @@ import express from 'express';
 import mysql from 'mysql';
 import cors from 'cors';
 
+// const db = mysql.createConnection({
+//   host:'localhost',
+//   port:8889,
+//   user:'root',
+//   password:'root',
+//   database:'green-around-the-world-db'
+// })
+
 const db = mysql.createConnection({
-  host:'localhost',
-  port:8889,
-  user:'root',
-  password:'root',
-  database:'green-around-the-world-db'
+  host: process.env.DBHOST,
+  port: process.env.DBPORT,
+  user: process.env.DBUSER,
+  password: process.env.DBPASSWORD,
+  database: process.env.DBDATABASE
+
 })
 
 
