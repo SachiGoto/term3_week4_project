@@ -16,7 +16,8 @@ const db = mysql.createConnection({
   port: process.env.DBPORT,
   user: process.env.DBUSER,
   password: process.env.DBPASSWORD,
-  database: process.env.DBDATABASE
+  database: process.env.DBDATABASE,
+  
 
 })
 
@@ -241,7 +242,8 @@ server.get('/products/:id', (req,res)=>{
 
 
 server.listen(4600, function(){
-console.log("Node express server is now running on port 4600")
+// console.log("Node express server is now running on port 4600")
+console.log("Node express server is now running on port" , process.env.DBPORT)
 });
 
 
