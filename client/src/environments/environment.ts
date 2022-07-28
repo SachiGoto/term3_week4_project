@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   name:"Dev Env",
-  server:"http://localhost:4600/"
+  server:"https://cms.sachigoto.me"
 
 
 };

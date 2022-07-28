@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ServiceService {
   private server = environment.server;
-  private productUrl = this.server + "products";
+  private productUrl = this.server + "/products";
 
   constructor(private clientHttp:HttpClient) { }
 
@@ -25,7 +25,7 @@ export class ServiceService {
     return this.clientHttp.get<Product>(this.productUrl + "/" + id);
   }
 
-  private allProductUrl = this.server + "allProducts";
+  private allProductUrl = this.server + "/allProducts";
 
   getAllProducts(){
     return this.clientHttp.get<Product[]>(this.allProductUrl);
@@ -33,7 +33,7 @@ export class ServiceService {
 
 
 
-private loginURL = this.server + "login";
+private loginURL = this.server + "/login";
 
 loginService(user_name:string, password:string){
 
@@ -48,7 +48,7 @@ return this.clientHttp.post<Login>(this.loginURL, loginBody);
 
 
 
-private addNewUrl = this.server + "newProducts"
+private addNewUrl = this.server + "/newProducts"
 
 addNewService(imageFront:string, imageBack:string, title:string, description:string, original_price:any, price:any, stock:string, display:string){
 
@@ -69,7 +69,7 @@ return this.clientHttp.post<{message:string, addNewProducts:boolean}>(this.addNe
 
 
 
-private updateURL = this.server + "update";
+private updateURL = this.server + "/update";
 // neeed to match with the end point
 updateUser(id:number, imageFront:string, imageBack:string, title:string, description:string, original_price:any, price:any, stock:string, display:string){
     let updateBody={
@@ -95,7 +95,7 @@ updateUser(id:number, imageFront:string, imageBack:string, title:string, descrip
 }
 
 
-private deleteURL = this.server + "deleteproduct";
+private deleteURL = this.server + "/deleteproduct";
 
 
 
