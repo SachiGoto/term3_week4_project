@@ -55,10 +55,10 @@ server.use(express.json());
 
 
 
-db.connect(error=>{
-  if(error) console.log('Sorry cannot connect to db: ' , error);
-  else console.log('Connected to mysql db');
-})
+// db.connect(error=>{
+//   if(error) console.log('Sorry cannot connect to db: ' , error);
+//   else console.log('Connected to mysql db');
+// })
 
 
 
