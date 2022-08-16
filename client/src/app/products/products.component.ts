@@ -9,7 +9,7 @@ import{Product} from '../interface/products.interface.ts'
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  products:Product[]=[];
+  products:any;
   constructor(private serviceHttp:ServiceService) { }
 
 
@@ -64,12 +64,12 @@ export class ProductsComponent implements OnInit {
 
 
   ngOnInit(): void {
+  //  console.log("Hello")
+    // this.serviceHttp.getOnlinelProducts().subscribe(item=>{
+    //   this.products = item
 
-    this.serviceHttp.getOnlinelProducts().subscribe(item=>{
-      this.products = item
-
-      console.log(this.products);
-    })
+      // console.log(this.products);
+    // })
   }
 
 }

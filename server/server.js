@@ -12,15 +12,40 @@ import 'dotenv/config';
 //   database:'green-around-the-world-db'
 // })
 
-const db = mysql.createConnection({
+// const db = mysql.createConnection({
+//   host: process.env.DBHOST,
+//   port: process.env.DBPORT,
+//   user: process.env.DBUSER,
+//   password: process.env.DBPASSWORD,
+//   database: process.env.DBDATABASE,
+
+
+  
+
+// })
+
+const db = mysql.createPool({
   host: process.env.DBHOST,
   port: process.env.DBPORT,
   user: process.env.DBUSER,
   password: process.env.DBPASSWORD,
   database: process.env.DBDATABASE,
+
+
   
 
 })
+
+// var db = mysql.createPool(dbConfig);
+// db.getConnection(function(err, connection) {
+//         //  Changed this line:
+//           // mysql -> connection.destroy();
+//           // To this line:
+//            db.releaseConnection(connection); 
+// })
+
+
+
 
 
 const server = express();
@@ -34,6 +59,8 @@ db.connect(error=>{
   if(error) console.log('Sorry cannot connect to db: ' , error);
   else console.log('Connected to mysql db');
 })
+
+
 
 // CALL `login`(@p0, @p1);
 // server.post('/login', (req, res)=>{

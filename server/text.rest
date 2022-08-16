@@ -86,7 +86,11 @@ DELETE {{url}}/deleteproduct/62
 GET https://cms.sachigoto.me/api/green-products/2?populate=deep
 
 
+###
+GET https://ecommerce.server.sachigoto.me/allproducts
 
+###
+GEThttps://cms.yukayamamoto.me/api/lost-and-founds
 
 
 
